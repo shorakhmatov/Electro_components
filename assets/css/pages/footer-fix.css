@@ -1,0 +1,33 @@
+/* Исправление цветов футера на странице баланса */
+.footer-section {
+    background-color: #2196F3 !important; /* var(--primary-color) */
+    color: #ffffff !important;
+}
+
+.footer-links a {
+    color: #ffffff !important;
+}
+
+.footer-title::after {
+    background-color: #FFC107 !important; /* var(--secondary-color) */
+}
+
+.social-links a:hover {
+    background-color: #FFC107 !important; /* var(--secondary-color) */
+}
+
+.ct-inside a {
+    color: #FFC107 !important; /* var(--secondary-color) */
+}
+
+.ct-inside a:hover {
+    color: #ffffff !important;
+}
+
+.newsletter-form button {
+    background-color: #FFC107 !important; /* var(--secondary-color) */
+}
+
+.newsletter-form button:hover {
+    background-color: #FFA000 !important; /* var(--secondary-dark) */
+}

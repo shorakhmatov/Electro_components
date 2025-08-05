@@ -1,0 +1,25 @@
+<?php
+session_start();
+require_once '../../config/database.php';
+
+// Проверка авторизации
+if (!isset($_SESSION['superadmin_id'])) {
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'error', 'message' => 'Unauthorized']);
+    exit;
+}
+
+try {
+    $database = new Database();
+    $conn = $database->getConnection();
+    
+    $stmt = $conn->query("SELECT * FROM banners ORDER BY id DESC");
+    $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'success', 'data' => $banners]);
+} catch (PDOException $e) {
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+}
+?>

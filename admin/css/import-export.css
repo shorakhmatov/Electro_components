@@ -1,0 +1,220 @@
+/* Стили для раздела импорта и экспорта товаров */
+
+/* Контейнер импорта */
+.import-container {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Шаги импорта */
+.import-step {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.import-step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.import-step h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.import-note {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Кнопка импорта */
+.import-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.import-button:hover {
+    background-color: #45a049;
+}
+
+.import-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.import-button i {
+    font-size: 18px;
+}
+
+/* Результат импорта */
+.import-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.import-success {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.import-success i {
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.import-error {
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.import-error i {
+    color: #F44336;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.import-warnings {
+    background-color: #fff8e1;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.import-warnings ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+}
+
+.import-warnings li {
+    margin-bottom: 5px;
+}
+
+/* Таблица предпросмотра */
+.preview-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.preview-more {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Контейнер экспорта */
+.export-container {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Кнопка экспорта */
+.export-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.export-button:hover {
+    background-color: #0b7dda;
+}
+
+.export-button i {
+    font-size: 18px;
+}
+
+/* Результат экспорта */
+.export-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.export-success {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.export-success i {
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.export-error {
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.export-error i {
+    color: #F44336;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Индикатор загрузки */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto 15px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,12 @@
+Header mapping: Array
+(
+    [id] => 0
+    [name] => 1
+    [category] => 2
+    [category_id] => 3
+    [description] => 4
+    [specifications] => 5
+    [price] => 6
+    [quantity] => 7
+    [image url] => 8
+)

@@ -1,0 +1,110 @@
+/* Стили для индикатора статуса подтверждения почты */
+.email-status {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.email-status.verified {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+.email-status.not-verified {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.email-status i {
+    margin-right: 4px;
+}
+
+.btn-verify-email {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-verify-email:hover {
+    background-color: #0069d9;
+}
+
+/* Стили для модального окна подтверждения почты */
+#verifyEmailModal .form-group {
+    margin-bottom: 20px;
+}
+
+#verifyEmailModal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#verifyEmailModal .verification-message {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+#verifyEmailModal .verification-message.error {
+    color: #dc3545;
+}
+
+#verifyEmailModal .verification-message.success {
+    color: #28a745;
+}
+
+#verifyEmailModal .resend-code {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#verifyEmailModal .resend-code a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#verifyEmailModal .resend-code a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для тестового контейнера с кодом */
+.test-code-container {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px dashed #dee2e6;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .email-status {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .btn-verify-email {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+}

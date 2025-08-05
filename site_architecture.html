@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архитектура сайта электронных компонентов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            background-image: linear-gradient(to bottom right, #f0f2f5, #e6e9f0);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #1565C0;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: #0D47A1;
+            letter-spacing: 0.5px;
+            position: relative;
+            display: inline-block;
+        }
+        h1:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            bottom: -15px;
+            left: 20%;
+            background: linear-gradient(to right, transparent, #2196F3, transparent);
+            border-radius: 2px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            padding-bottom: 15px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            background: linear-gradient(to right, transparent, #2196F3, transparent);
+            background-size: 100% 2px;
+            background-position: 0 bottom;
+            background-repeat: no-repeat;
+            border-bottom: none;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: #0D47A1;
+            text-align: left;
+            margin-left: 20px;
+            border-left: 4px solid #2196F3;
+            padding-left: 15px;
+        }
+        .architecture-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .architecture-part {
+            width: 100%;
+            overflow: auto;
+            margin-bottom: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background-color: white;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .architecture-part:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+        }
+        .mermaid {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            min-height: 300px;
+            margin: 0 auto;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .section-description {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: justify;
+            border-left: 4px solid #2196F3;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .navigation {
+            position: sticky;
+            top: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.8);
+            transition: all 0.3s ease;
+        }
+        .navigation:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .navigation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        .navigation li {
+            margin: 5px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #1565C0;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(33, 150, 243, 0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+        .navigation a:hover {
+            background-color: #1565C0;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(21, 101, 192, 0.3);
+            border-color: #1565C0;
+        }
+        .navigation a i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+            vertical-align: middle;
+            color: #2196F3;
+            transition: all 0.3s ease;
+        }
+        .navigation a:hover i {
+            color: white;
+            transform: scale(1.2);
+        }
+        .note {
+            font-style: italic;
+            text-align: center;
+            margin: 25px 0;
+            color: #555;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border-left: 4px solid #FFD54F;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.05rem;
+        }
+        .tab-container {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            justify-content: center;
+            gap: 5px;
+        }
+        .tab {
+            padding: 12px 24px;
+            background-color: #f0f0f0;
+            border-radius: 8px 8px 0 0;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #555;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-bottom: none;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+        }
+        .tab:hover {
+            background-color: #e3f2fd;
+            color: #1565C0;
+            transform: translateY(-3px);
+        }
+        .tab.active {
+            background-color: #1565C0;
+            color: white;
+            box-shadow: 0 -2px 15px rgba(21, 101, 192, 0.2);
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Улучшение для диаграмм */
+        .mermaid svg {
+            transition: all 0.5s ease;
+        }
+        .mermaid:hover svg {
+            transform: scale(1.02);
+        }
+        .diagram-section {
+            margin-bottom: 60px;
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .diagram-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #1565C0, #42a5f5, #1565C0);
+        }
+        .diagram-title {
+            font-size: 1.6rem;
+            color: #0D47A1;
+            margin-bottom: 20px;
+            border-left: 5px solid #2196F3;
+            padding-left: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+        .diagram-description {
+            margin-bottom: 25px;
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        /* Дополнительные стили для навигационной схемы */
+        #navigation-flow .mermaid {
+            background: linear-gradient(to bottom right, #ffffff, #f5f9ff);
+            border: 1px solid rgba(33, 150, 243, 0.1);
+        }
+        #navigation-flow .architecture-part:hover {
+            box-shadow: 0 15px 40px rgba(21, 101, 192, 0.15);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация Mermaid
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'default',
+                securityLevel: 'loose',
+                fontFamily: 'Arial',
+                fontSize: 14
+            });
+            
+            // Функция для переключения вкладок
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    
+                    // Удаляем активный класс у всех вкладок и контента
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Добавляем активный класс выбранной вкладке и контенту
+                    tab.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Активируем первую вкладку по умолчанию
+            if (tabs.length > 0) {
+                tabs[0].click();
+            }
+            
+            // Плавная прокрутка к якорям
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Архитектура сайта электронных компонентов</h1>
+    <p class="note">Для корректного отображения схемы требуется подключение к интернету</p>
+    
+    <!-- Навигация -->
+    <div class="navigation">
+        <ul>
+            <li><a href="#overview"><i class="fas fa-sitemap"></i> Общая структура</a></li>
+            <li><a href="#client"><i class="fas fa-laptop"></i> Клиентская часть</a></li>
+            <li><a href="#admin"><i class="fas fa-cog"></i> Административная панель</a></li>
+            <li><a href="#api"><i class="fas fa-database"></i> API и БД</a></li>
+            <li><a href="#payment"><i class="fas fa-credit-card"></i> Платежная система</a></li>
+            <li><a href="#mindmap"><i class="fas fa-project-diagram"></i> Детальная структура</a></li>
+            <li><a href="#processes"><i class="fas fa-exchange-alt"></i> Процессы</a></li>
+            <li><a href="#navigation-flow"><i class="fas fa-route"></i> Навигационная схема</a></li>
+            <li><a href="#admin-structure"><i class="fas fa-cogs"></i> Структура админпанели</a></li>
+        </ul>
+    </div>
+    
+    <div class="architecture-container">
+        <!-- Общая структура сайта -->
+        <section id="overview" class="diagram-section">
+            <h2>Общая структура сайта</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает общую структуру сайта электронных компонентов, разделенную на клиентскую и административную части.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+flowchart TD
+    A[Интернет-магазин<br>электронных компонентов] --> B[Клиентская часть]
+    A --> C[Административная<br>панель]
+    
+    %% Клиентская часть
+    B --> D[Главная страница<br>index.php]
+                </pre>
+            </div>
+        </section>
+
+        <!-- Клиентская часть -->
+        <section id="client" class="diagram-section">
+            <h2>Клиентская часть</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает структуру клиентской части сайта, включая главную страницу, каталог, корзину и процесс оформления заказа.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+flowchart TD
+    subgraph "Интернет-магазин"
+        subgraph "Клиентская часть"
+            D[Интерфейс магазина<br>для покупателя]
+        end
+        subgraph "Администрирование"
+            A[Инструменты<br>администратора]
+        end
+    end
+
+    subgraph "Программная часть"
+        subgraph "Операционная часть"
+            O[Обработка запросов<br>и бизнес-логика]
+        end
+        subgraph "Серверная часть"
+            S[База данных<br>и хранение]
+        end
+    end
+
+    %% Связи между компонентами
+    D <--> O
+    A <--> O
+    O <--> S
+    
+
+                </pre>
+            </div>
+        </section>
+
+        <!-- API и БД -->
+        <section id="api" class="diagram-section">
+            <h2>API и База данных</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает структуру API и базы данных сайта, включая основные таблицы и их взаимосвязи.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+flowchart TD
+    
+    %% Детализация панели управления
+    M --> M1[Настройки магазина]
+    M --> M2[Управление товарами]
+    M --> M3[Категории]
+    M --> M4[Заказы]
+    M --> M5[Импорт товаров]
+    M --> M6[Пользователи]
+    M --> M7[Доходы]
+    
+    %% Детализация настроек магазина
+    M1 --> M1_1[Основные]
+    M1 --> M1_2[Внешний вид]
+    M1 --> M1_3[Контакты]
+    M1 --> M1_4[Доставка]
+    M1 --> M1_5[SEO]
+    
+    %% Детализация управления товарами
+    M2 --> M2_1[Добавление товара]
+    M2 --> M2_2[Редактирование товара]
+    M2 --> M2_3[Удаление товара]
+    
+    %% Детализация категорий
+    M3 --> M3_1[Добавление категории]
+    M3 --> M3_2[Редактирование категории]
+    M3 --> M3_3[Удаление категории]
+    
+    %% Детализация заказов
+    M4 --> M4_1[Просмотр заказов]
+    M4 --> M4_2[Фильтрация по статусу]
+    M4 --> M4_3[Изменение статуса]
+    M4 --> M4_4[Детали заказа]
+    
+    %% Детализация импорта товаров
+    M5 --> M5_1[Загрузка файла]
+    M5 --> M5_2[Предпросмотр данных]
+    M5 --> M5_3[Импорт в базу]
+    
+    %% Детализация пользователей
+    M6 --> M6_1[Список пользователей]
+    M6 --> M6_2[Информация о пользователе]
+    
+    %% Детализация доходов
+    M7 --> M7_1[Статистика продаж]
+    M7 --> M7_2[Графики доходов]
+    M7 --> M7_3[Отчеты по периодам]
+            </pre>
+        </div>
+        
+        <h2>Часть 2: API и структура базы данных</h2>
+        <div class="architecture-part">
+            <pre class="mermaid">
+flowchart TD
+    A[API и база данных] --> B[API Endpoints]
+    A --> C[База данных]
+    
+    %% API Endpoints
+    B --> D[Авторизация<br>api/auth.php]
+    B --> E[Корзина<br>api/cart.php]
+    B --> F[Избранное<br>api/favorites.php]
+    B --> G[Профиль<br>api/profile.php]
+    B --> H[Товары<br>api/products.php]
+    B --> I[Заказы<br>api/place_order.php]
+    B --> J[Баланс<br>api/balance.php]
+    
+    %% Детализация API авторизации
+    D --> D1[Регистрация]
+    D --> D2[Вход]
+    D --> D3[Проверка статуса]
+    D --> D4[Сброс пароля]
+    D --> D5[Верификация email]
+    
+    %% Детализация API корзины
+    E --> E1[Добавление товара]
+    E --> E2[Удаление товара]
+    E --> E3[Изменение количества]
+    E --> E4[Получение содержимого]
+    E --> E5[Подсчет количества]
+    
+    %% Детализация API избранного
+    F --> F1[Добавление в избранное]
+    F --> F2[Удаление из избранного]
+    F --> F3[Проверка наличия в избранном]
+    F --> F4[Получение списка избранного]
+    
+    %% Детализация API профиля
+    G --> G1[Получение данных профиля]
+    G --> G2[Обновление данных]
+    G --> G3[Изменение пароля]
+    G --> G4[Настройки уведомлений]
+    G --> G5[Удаление аккаунта]
+    
+    %% Детализация API товаров
+    H --> H1[Получение списка товаров]
+    H --> H2[Поиск товаров]
+    H --> H3[Фильтрация товаров]
+    H --> H4[Детали товара]
+    
+    %% Детализация API заказов
+    I --> I1[Создание заказа]
+    I --> I2[Получение деталей заказа]
+    I --> I3[Отмена заказа]
+    
+    %% Детализация API баланса
+    J --> J1[Получение баланса]
+    J --> J2[История транзакций]
+    J --> J3[Обработка платежей]
+    
+    %% База данных
+    C --> K[Таблицы пользователей]
+    C --> L[Таблицы товаров]
+    C --> M[Таблицы заказов]
+    C --> N[Таблицы платежей]
+    C --> O[Таблицы настроек]
+    
+    %% Детализация таблиц пользователей
+    K --> K1[users]
+    K --> K2[user_settings]
+    K --> K3[delivery_addresses]
+    
+    %% Детализация таблиц товаров
+    L --> L1[products]
+    L --> L2[categories]
+    L --> L3[favorites]
+    L --> L4[cart]
+    L --> L5[reviews]
+    
+    %% Детализация таблиц заказов
+    M --> M1[orders]
+    M --> M2[order_items]
+    
+    %% Детализация таблиц платежей
+    N --> N1[payment_cards]
+    N --> N2[payment_wallets]
+                </pre>
+            </div>
+        </section>
+
+        <!-- Платежная система -->
+        <section id="payment" class="diagram-section">
+            <h2>Платежная система</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает структуру платежной системы сайта, включая различные способы оплаты и процесс обработки платежей.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+flowchart TD
+    N --> N3[transactions]
+    N --> N4[auto_payments]
+    N --> N5[bank_cards]
+    
+    %% Детализация таблиц настроек
+    O --> O1[settings]
+    O --> O2[site_settings]
+    O --> O3[payment_settings]
+    O --> O4[notification_settings]
+                </pre>
+            </div>
+        </section>
+
+        <!-- Детальная структура сайта (Mindmap) -->
+        <section id="mindmap" class="diagram-section">
+            <h2>Детальная структура сайта</h2>
+            <div class="section-description">
+                <p>Эта диаграмма представляет детальную структуру сайта в виде интеллект-карты (mindmap), показывая все основные разделы и подразделы сайта.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+mindmap
+  root((Интернет-магазин
+электронных
+компонентов))
+    Главная страница
+      ::icon(fa fa-home)
+      Шапка сайта
+        ::icon(fa fa-bars)
+        Логотип
+        Поиск
+        Навигация
+          Профиль
+          Избранное
+          Корзина
+      Промо-блоки
+        ::icon(fa fa-percent)
+        Акции и скидки
+        Новинки
+        Специальные предложения
+      Категории товаров
+        ::icon(fa fa-th-large)
+        Микроконтроллеры
+        Резисторы
+        Конденсаторы
+        Диоды
+        Транзисторы
+        Микросхемы
+        Датчики
+      Популярные товары
+        ::icon(fa fa-star)
+      Подвал сайта
+        ::icon(fa fa-info-circle)
+        Контакты
+        О нас
+        Доставка и оплата
+        Политика конфиденциальности
+    Каталог
+      ::icon(fa fa-list)
+      Фильтрация товаров
+        По категории
+        По цене
+        По наличию
+        По производителю
+      Сортировка товаров
+        По популярности
+        По цене (возрастание)
+        По цене (убывание)
+        По новизне
+      Пагинация
+      Карточки товаров
+        Изображение
+        Название
+        Цена
+        Наличие
+        Кнопка "В корзину"
+        Кнопка "В избранное"
+    Страница товара
+      ::icon(fa fa-microchip)
+      Галерея изображений
+      Информация о товаре
+        Название
+        Артикул
+        Цена
+        Наличие
+        Описание
+        Характеристики
+      Кнопки действий
+        Добавить в корзину
+        Добавить в избранное
+      Похожие товары
+      Отзывы о товаре
+    Корзина
+      ::icon(fa fa-shopping-cart)
+      Список товаров
+        Изображение
+        Название
+        Цена
+        Количество
+        Сумма
+        Удаление товара
+      Итоговая сумма
+      Кнопка "Оформить заказ"
+    Оформление заказа
+      ::icon(fa fa-credit-card)
+      Данные пользователя
+        Имя
+        Email
+        Телефон
+      Адрес доставки
+        Выбор существующего
+        Добавление нового
+      Способ оплаты
+        Банковская карта
+        Электронный кошелек
+        Система быстрых платежей
+      Подтверждение заказа
+    Личный кабинет
+      ::icon(fa fa-user)
+      Личные данные
+        Просмотр
+        Редактирование
+      История заказов
+        Список заказов
+        Детали заказа
+        Статус заказа
+      Избранные товары
+      Адреса доставки
+        Список адресов
+        Добавление адреса
+        Редактирование адреса
+        Удаление адреса
+      Способы оплаты
+        Список карт
+        Добавление карты
+        Удаление карты
+    Авторизация
+      ::icon(fa fa-lock)
+      Вход
+      Регистрация
+      Восстановление пароля
+    Административная панель
+      ::icon(fa fa-cog)
+      Управление товарами
+        Список товаров
+        Добавление товара
+        Редактирование товара
+        Удаление товара
+      Управление категориями
+        Список категорий
+        Добавление категории
+        Редактирование категории
+      Управление заказами
+        Список заказов
+        Детали заказа
+        Изменение статуса
+      Управление пользователями
+        Список пользователей
+        Детали пользователя
+        Блокировка/разблокировка
+      Настройки сайта
+        Основные настройки
+        Настройки платежей
+        Настройки доставки
+                </pre>
+            </div>
+        </section>
+
+        <!-- Процессы и взаимодействия -->
+        <section id="processes" class="diagram-section">
+            <h2>Процессы и взаимодействия</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает основные процессы и взаимодействия на сайте, включая процесс покупки, регистрации и управления заказами.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+flowchart TB
+    %% Основные процессы
+    Start([Пользователь
+заходит на сайт]) --> HomePage[Главная страница]
+    
+    %% Процесс покупки
+    HomePage --> Catalog[Каталог товаров]
+    Catalog --> ProductPage[Страница товара]
+    ProductPage --> AddToCart[Добавление в корзину]
+    AddToCart --> Cart[Корзина]
+    Cart --> Checkout[Оформление заказа]
+    Checkout --> Payment[Оплата]
+    Payment --> OrderConfirmation[Подтверждение заказа]
+    
+    %% Процесс регистрации
+    HomePage --> Registration[Регистрация]
+    Registration --> Verification[Подтверждение email]
+    Verification --> Login[Вход в систему]
+    Login --> Profile[Личный кабинет]
+    
+    %% Процесс управления заказами
+    Profile --> OrderHistory[История заказов]
+    OrderHistory --> OrderDetails[Детали заказа]
+    OrderDetails --> CancelOrder[Отмена заказа]
+    
+    %% Процесс управления избранным
+    ProductPage --> AddToFavorites[Добавление в избранное]
+    AddToFavorites --> Favorites[Избранное]
+    Favorites --> RemoveFromFavorites[Удаление из избранного]
+    
+    %% Процесс поиска
+    HomePage --> Search[Поиск]
+    Search --> SearchResults[Результаты поиска]
+    SearchResults --> ProductPage
+    
+    %% Процесс администрирования
+    AdminLogin[Вход в админку] --> AdminPanel[Админ-панель]
+    AdminPanel --> ManageProducts[Управление товарами]
+    AdminPanel --> ManageCategories[Управление категориями]
+    AdminPanel --> ManageOrders[Управление заказами]
+    AdminPanel --> ManageUsers[Управление пользователями]
+    AdminPanel --> SiteSettings[Настройки сайта]
+                </pre>
+            </div>
+        </section>
+
+        <!-- Навигационная схема сайта -->
+        <section id="navigation-flow" class="diagram-section">
+            <h2>Навигационная схема сайта</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает логику навигации по сайту и взаимосвязи между основными страницами.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+flowchart LR
+    Home["Главная страница
+    магазина"] --> Catalog["Каталог товаров"]
+    Home --> Category["Категории"]
+    Home --> Search["Поиск"]
+    Home --> Profile["Личный кабинет"]
+    
+    Catalog --> Product["Страница товара"]
+    Category --> Product
+    Search --> Product
+    
+    Product --> Analysis["Анализ товара"]
+    Analysis --> Cart["Корзина"]
+    Analysis --> Favorites["Избранное"]
+    
+    Cart --> Checkout["Оформление заказа"]
+    Checkout --> Payment["Оплата"]
+    Payment --> OrderConfirmation["Подтверждение заказа"]
+    
+    Profile --> OrderHistory["История заказов"]
+    Profile --> SavedAddresses["Сохраненные адреса"]
+    Profile --> Settings["Настройки"]
+    
+    %% Связи с базой данных
+    subgraph DB ["База данных"]
+        Products[("Товары")]
+        Categories[("Категории")]
+        Users[("Пользователи")]
+        Orders[("Заказы")]
+        Payments[("Платежи")]
+    end
+    
+    %% Связи страниц с базой данных
+    Home -.-> Categories
+    Catalog -.-> Products
+    Category -.-> Categories
+    Product -.-> Products
+    Cart -.-> Products
+    Checkout -.-> Orders
+    Payment -.-> Payments
+    Profile -.-> Users
+    OrderHistory -.-> Orders
+    
+    %% Стилизация
+    classDef page fill:#f9f9f9,stroke:#333,stroke-width:2px,color:#333,rx:5,ry:5;
+    classDef dbTable fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#01579b,rx:30,ry:30;
+    
+    class Home,Catalog,Category,Search,Product,Analysis,Cart,Favorites,Checkout,Payment,OrderConfirmation,Profile,OrderHistory,SavedAddresses,Settings page;
+    class Products,Categories,Users,Orders,Payments dbTable;
+                </pre>
+            </div>
+        </section>
+
+        <!-- Структура административной панели -->
+        <section id="admin-structure" class="diagram-section">
+            <h2>Структура административной панели</h2>
+            <div class="section-description">
+                <p>Эта диаграмма показывает структуру административной панели сайта электронных компонентов, включая основные разделы и их взаимосвязи.</p>
+            </div>
+            <div class="architecture-part">
+                <pre class="mermaid">
+ flowchart TD
+    subgraph "Интернет-магазин"
+        subgraph "Программная часть"
+            subgraph "Операционная часть"
+                OP[Обработка данных]
+            end
+            subgraph "Серверная часть"
+                DB[База данных]
+            end
+        end
+        subgraph "Администрирование"
+            subgraph "Инструменты управления"
+                Products[Управление товарами]
+                Categories[Управление категориями]
+                Orders[Управление заказами]
+                Users[Управление пользователями]
+                Settings[Настройки сайта]
+            end
+        end
+        subgraph "Клиентская часть"
+            subgraph "Интерфейс магазина"
+                UI[Для покупателя]
+            end
+        end
+    end
+    
+    %% Связи между компонентами
+    Products <--> OP
+    Categories <--> OP
+    Orders <--> OP
+    Users <--> OP
+    Settings <--> OP
+    OP <--> DB
+    UI <--> OP
+    
+    %% Стилизация
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
+    classDef section fill:#f5f5f5,stroke:#666,stroke-width:1px;
+    classDef component fill:#fff,stroke:#333,stroke-width:2px;
+    
+    class Products,Categories,Orders,Users,Settings,OP,DB,UI component;
+                </pre>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+
+    <h2>Часть 3: Логика работы платежной системы</h2>
+    <div class="architecture-part">
+        <pre class="mermaid">
+ flowchart TD
+    A[Платежная система] --> B[Выбор способа оплаты]
+    
+    %% Способы оплаты
+    B --> C[Банковская карта]
+    B --> D[Электронный кошелек]
+    B --> E[Система быстрых платежей]
+    
+    %% Процесс оплаты банковской картой
+    C --> C1[Ввод данных карты]
+    C1 --> C2[Проверка данных]
+    C2 --> C3[Отправка запроса в банк]
+    C3 --> C4{Требуется 3D-Secure?}
+    C4 -->|Да| C5[Перенаправление на страницу банка]
+    C5 --> C6[Подтверждение в банке]
+    C4 -->|Нет| C7[Отправка SMS-кода]
+    C6 --> C7
+    C7 --> C8[Ввод кода подтверждения]
+    C8 --> C9[Проверка кода]
+    C9 --> C10{Код верный?}
+    C10 -->|Да| C11[Подтверждение платежа]
+    C10 -->|Нет| C12[Повторная отправка кода]
+    C12 --> C8
+    
+    %% Процесс оплаты электронным кошельком
+    D --> D1[Выбор типа кошелька]
+    D1 --> D2[Перенаправление на сайт платежной системы]
+    D2 --> D3[Авторизация в системе]
+    D3 --> D4[Подтверждение платежа]
+    D4 --> D5[Возврат на сайт магазина]
+    
+    %% Система быстрых платежей
+    E --> E1[Генерация QR-кода]
+    E1 --> E2[Сканирование через приложение банка]
+    E2 --> E3[Подтверждение в приложении]
+    E3 --> E4[Получение уведомления об оплате]
+    
+
+    
+    %% Обработка успешного платежа
+    C11 --> I[Обработка успешного платежа]
+    D5 --> I
+    E4 --> I
+    
+    %% Действия после успешной оплаты
+    I --> I1[Обновление статуса заказа]
+    I1 --> I2[Отправка уведомления клиенту]
+    I2 --> I3[Отправка уведомления продавцу]
+    I3 --> I4[Формирование документов]
+    I4 --> I5[Передача в отдел логистики]
+    
+    %% Уведомление продавца
+    I3 --> J1[Уведомление в админ-панели]
+    I3 --> J2[Email-уведомление]
+    I3 --> J3[SMS-уведомление]
+    I3 --> J4[Push-уведомление]
+    
+    %% Детали уведомления продавцу
+    J1 --> K1[Содержимое в админ-панели: номер заказа, статус, сумма, дата, список товаров]
+    J2 --> K2[Содержимое Email: номер заказа, список товаров, адрес доставки, информация об оплате, контакты клиента]
+    J3 --> K3[Содержимое SMS: краткая информация о номере заказа и сумме]
+    J4 --> K4[Содержимое Push: номер заказа, сумма, статус оплаты]
+        </pre>
+    </div>
+    <h2>Часть 4: Детальная структура и логика работы сайта</h2>
+    <div class="architecture-part">
+        <pre class="mermaid">
+mindmap
+  root((Интернет-магазин
+электронных
+компонентов))
+    Главная страница
+      ::icon(fa fa-home)
+      Шапка сайта
+        ::icon(fa fa-bars)
+        Логотип
+        Поиск
+        Навигация
+          Профиль
+          Избранное
+          Корзина
+      Промо-блоки
+        ::icon(fa fa-percent)
+        Акции и скидки
+        Новинки
+        Специальные предложения
+      Категории товаров
+        ::icon(fa fa-th-large)
+        Микроконтроллеры
+        Резисторы
+        Конденсаторы
+        Диоды
+        Транзисторы
+        Микросхемы
+        Датчики
+      Популярные товары
+        ::icon(fa fa-star)
+      Подвал сайта
+        ::icon(fa fa-info-circle)
+        Контакты
+        О нас
+        Доставка и оплата
+        Политика конфиденциальности
+    Каталог
+      ::icon(fa fa-list)
+      Фильтрация товаров
+        По категории
+        По цене
+        По наличию
+        По производителю
+      Сортировка товаров
+        По популярности
+        По цене (возрастание)
+        По цене (убывание)
+        По новизне
+      Пагинация
+      Карточки товаров
+        Изображение
+        Название
+        Цена
+        Наличие
+        Кнопка "В корзину"
+        Кнопка "В избранное"
+    Страница товара
+      ::icon(fa fa-microchip)
+      Галерея изображений
+      Информация о товаре
+        Название
+        Артикул
+        Цена
+        Наличие
+        Описание
+        Характеристики
+      Кнопки действий
+        Добавить в корзину
+        Добавить в избранное
+      Похожие товары
+      Отзывы о товаре
+    Корзина
+      ::icon(fa fa-shopping-cart)
+      Список товаров
+        Изображение
+        Название
+        Цена
+        Количество
+        Сумма
+        Удаление товара
+      Итоговая сумма
+      Кнопка "Оформить заказ"
+    Оформление заказа
+      ::icon(fa fa-credit-card)
+      Данные пользователя
+        Имя
+        Email
+        Телефон
+      Адрес доставки
+        Выбор существующего
+        Добавление нового
+      Способ оплаты
+        Банковская карта
+        Электронный кошелек
+        Система быстрых платежей
+      Подтверждение заказа
+    Личный кабинет
+      ::icon(fa fa-user)
+      Личные данные
+        Просмотр
+        Редактирование
+      История заказов
+        Список заказов
+        Детали заказа
+        Статус заказа
+      Избранные товары
+      Адреса доставки
+        Список адресов
+        Добавление адреса
+        Редактирование адреса
+        Удаление адреса
+      Способы оплаты
+        Список карт
+        Добавление карты
+        Удаление карты
+    Авторизация
+      ::icon(fa fa-lock)
+      Вход
+        Email/телефон
+        Пароль
+        Восстановление пароля
+      Регистрация
+        Личные данные
+        Email
+        Телефон
+        Пароль
+        Подтверждение email/телефона
+    Поиск
+      ::icon(fa fa-search)
+      Поисковый запрос
+      Результаты поиска
+        Товары
+        Категории
+      Фильтрация результатов
+    Административная панель
+      ::icon(fa fa-cog)
+      Управление товарами
+        Список товаров
+        Добавление товара
+        Редактирование товара
+        Удаление товара
+      Управление категориями
+        Список категорий
+        Добавление категории
+        Редактирование категории
+        Удаление категории
+      Управление заказами
+        Список заказов
+        Детали заказа
+        Изменение статуса
+      Управление пользователями
+        Список пользователей
+        Детали пользователя
+        Блокировка пользователя
+      Настройки магазина
+        Основные настройки
+        Настройки доставки
+        Настройки оплаты
+        SEO-настройки
+    Серверная часть
+      ::icon(fa fa-server)
+      База данных
+        Таблицы
+          users
+          products
+          categories
+          orders
+          order_items
+          cart
+          favorites
+          delivery_addresses
+          payment_cards
+        Связи между таблицами
+      API Endpoints
+        Авторизация
+          Регистрация
+          Вход
+          Выход
+        Товары
+          Получение списка
+          Получение товара
+          Поиск
+        Корзина
+          Добавление товара
+          Удаление товара
+          Изменение количества
+        Заказы
+          Создание заказа
+          Получение списка
+          Получение деталей
+      Обработка платежей
+        Банковские карты
+        Электронные кошельки
+        Система быстрых платежей
+        </pre>
+    </div>
+
+    <h2>Часть 5: Процессы и взаимодействия</h2>
+    <div class="architecture-part">
+        <pre class="mermaid">
+flowchart TB
+    %% Основные процессы
+    Start([Пользователь
+заходит на сайт]) --> HomePage[Главная страница]
+    
+    %% Навигация по сайту
+    HomePage --> Catalog[Каталог товаров]
+    HomePage --> Search[Поиск товаров]
+    HomePage --> Login[Вход/Регистрация]
+    HomePage --> Cart[Корзина]
+    HomePage --> Favorites[Избранное]
+    HomePage --> Profile[Личный кабинет]
+    
+    %% Процесс просмотра каталога
+    Catalog --> CategoryPage[Страница категории]
+    CategoryPage --> ProductPage[Страница товара]
+    Search --> ProductPage
+    
+    %% Процесс добавления в корзину
+    ProductPage --> AddToCart{Добавить
+в корзину?}
+    AddToCart -->|Да| CheckAuth1{Пользователь
+авторизован?}
+    CheckAuth1 -->|Да| AddToCartDB[Добавление товара
+в корзину]
+    CheckAuth1 -->|Нет| Login
+    Login --> AddToCartDB
+    AddToCartDB --> Cart
+    AddToCart -->|Нет| ProductPage
+    
+    %% Процесс добавления в избранное
+    ProductPage --> AddToFav{Добавить
+в избранное?}
+    AddToFav -->|Да| CheckAuth2{Пользователь
+авторизован?}
+    CheckAuth2 -->|Да| AddToFavDB[Добавление товара
+в избранное]
+    CheckAuth2 -->|Нет| Login
+    Login --> AddToFavDB
+    AddToFavDB --> Favorites
+    AddToFav -->|Нет| ProductPage
+    
+    %% Процесс оформления заказа
+    Cart --> Checkout[Оформление заказа]
+    Checkout --> CheckAuth3{Пользователь
+авторизован?}
+    CheckAuth3 -->|Да| DeliveryInfo[Ввод информации
+о доставке]
+    CheckAuth3 -->|Нет| Login
+    Login --> DeliveryInfo
+    DeliveryInfo --> PaymentMethod[Выбор способа
+оплаты]
+    PaymentMethod --> ConfirmOrder[Подтверждение
+заказа]
+    ConfirmOrder --> Payment[Оплата]
+    Payment --> PaymentSuccess{Оплата
+успешна?}
+    PaymentSuccess -->|Да| OrderComplete[Заказ
+оформлен]
+    PaymentSuccess -->|Нет| PaymentError[Ошибка
+оплаты]
+    PaymentError --> PaymentMethod
+    OrderComplete --> OrderConfirmation[Страница
+подтверждения заказа]
+    
+    %% Процесс работы с личным кабинетом
+    Profile --> ViewProfile[Просмотр
+профиля]
+    Profile --> EditProfile[Редактирование
+профиля]
+    Profile --> ViewOrders[Просмотр
+заказов]
+    Profile --> ViewAddresses[Управление
+адресами доставки]
+    Profile --> ViewPaymentMethods[Управление
+способами оплаты]
+    
+    %% Процесс администрирования
+    AdminLogin[Вход в
+панель администратора] --> AdminPanel[Панель
+администратора]
+    AdminPanel --> ManageProducts[Управление
+товарами]
+    AdminPanel --> ManageCategories[Управление
+категориями]
+    AdminPanel --> ManageOrders[Управление
+заказами]
+    AdminPanel --> ManageUsers[Управление
+пользователями]
+    AdminPanel --> StoreSettings[Настройки
+магазина]
+        </pre>
+    </div>
+</body>
+</html>

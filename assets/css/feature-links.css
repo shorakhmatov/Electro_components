@@ -1,0 +1,223 @@
+/* Стили для ленты с быстрыми ссылками */
+.feature-links {
+    margin: 30px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.feature-links-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--gray-200);
+}
+
+.feature-links-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.feature-links-container::-webkit-scrollbar-track {
+    background: var(--gray-200);
+    border-radius: 10px;
+}
+
+.feature-links-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.feature-link {
+    width: 360px;
+    height: 218px;
+    flex: 0 0 auto;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    border: 1px solid var(--gray-200);
+}
+
+.feature-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-light);
+}
+
+.feature-link-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.feature-link-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+.feature-link-description {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.feature-link-image {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    margin-top: auto;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+    .feature-links {
+        margin: 25px 0;
+    }
+    
+    .feature-link {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .feature-link-image {
+        height: 110px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .feature-links {
+        margin: 20px 0;
+    }
+    
+    .feature-links-container {
+        gap: 10px;
+        padding: 5px 0;
+    }
+    
+    .feature-link {
+        width: 240px;
+        height: 180px;
+    }
+    
+    .feature-link-content {
+        padding: 12px;
+    }
+    
+    .feature-link-title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    
+    .feature-link-description {
+        font-size: 12px;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    
+    .feature-link-image {
+        height: 100px;
+    }
+}
+
+/* Адаптивность для маленьких мобильных устройств */
+@media (max-width: 480px) {
+    .feature-links {
+        margin: 15px 0;
+    }
+    
+    .feature-link {
+        width: 200px;
+        height: 170px;
+    }
+    
+    .feature-link-content {
+        padding: 10px;
+    }
+    
+    .feature-link-title {
+        font-size: 14px;
+    }
+    
+    .feature-link-description {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+    
+    .feature-link-image {
+        height: 90px;
+    }
+}
+
+/* Стили для сворачиваемых категорий */
+.categories-collapsible {
+    margin-bottom: 30px;
+}
+
+.categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--gray-200);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.categories-header:hover {
+    border-color: var(--primary-color);
+}
+
+.categories-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.categories-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.categories-toggle:hover {
+    color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.categories-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.categories-toggle.collapsed i {
+    transform: rotate(-180deg);
+}
+
+.categories-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.categories-content.collapsed {
+    max-height: 0;
+}

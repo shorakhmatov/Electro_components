@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транзисторы | ElectroStore</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <h1>ElectroStore</h1>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="../profile.html"><i class="fas fa-user"></i> Профиль</a></li>
+                    <li><a href="../favorites.html"><i class="fas fa-heart"></i> Избранное</a></li>
+                    <li><a href="../cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+                    <li><a href="../balance.html"><i class="fas fa-wallet"></i> Баланс</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="category-header">
+                <h1>
+                    <i class="fas fa-broadcast-tower"></i>
+                    Транзисторы
+                </h1>
+                <div class="category-controls">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск по категории..." id="categorySearch">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="sort-box">
+                        <select id="sortSelect">
+                            <option value="popular">По популярности</option>
+                            <option value="price-asc">По цене (возр.)</option>
+                            <option value="price-desc">По цене (убыв.)</option>
+                            <option value="name">По названию</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-grid" id="productsGrid">
+                <!-- Товары будут добавлены динамически -->
+            </div>
+
+            <div class="category-filters">
+                <h2>Фильтры</h2>
+                <div class="filter-group">
+                    <h3>Тип транзистора</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="npn"> NPN
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="pnp"> PNP
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="mosfet-n"> MOSFET-N
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="mosfet-p"> MOSFET-P
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <h3>Корпус</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="to-92"> TO-92
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="to-220"> TO-220
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="sot-23"> SOT-23
+                    </label>
+                </div>
+                <button class="btn-apply-filters">Применить</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+                            &copy; <script>document.write(new Date().getFullYear());</script> Электронные компоненты | Все права защищены. Created by <a href="mailto:daler.shd.03@gmail.com">Daler</a>
+                            <br>ИВТ-12, Шорахматов Далер<br>АлтГТУ им. И.И. Ползунова, г. Барнаул
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/products-data.js"></script>
+    <script src="../assets/js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* Стили для мобильного бокового меню */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1002;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-sidebar.active {
+    left: 0;
+}
+
+.mobile-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-sidebar-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.mobile-sidebar-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+}
+
+.mobile-sidebar-menu {
+    padding: 15px 0;
+    flex-grow: 1;
+}
+
+/* Стили для поиска в боковом меню */
+.mobile-sidebar-search {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-sidebar-search form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-sidebar-search input[type="text"] {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.mobile-sidebar-search input[type="text"]:focus {
+    border-color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+    outline: none;
+}
+
+.mobile-sidebar-search button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.mobile-sidebar-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.mobile-sidebar-menu-item:hover {
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+.mobile-sidebar-menu-item i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(33, 150, 243, 0.1);
+    border-radius: 50%;
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.mobile-sidebar-menu-item:hover i {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.mobile-sidebar-menu-item .badge {
+    position: absolute;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Затемнение фона при открытом меню */
+.mobile-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Скрываем сайдбар на десктопе */
+@media screen and (min-width: 768px) {
+    .mobile-sidebar, .mobile-sidebar-overlay {
+        display: none;
+    }
+}

@@ -1,0 +1,433 @@
+/* Стили для модальных окон подтверждения платежа */
+
+/* Стили для модального окна верификации */
+#verification-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#verification-modal .modal-content {
+    max-width: 450px;
+    width: 90%;
+    margin: 10vh auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 30px;
+    position: relative;
+    animation: modalFadeIn 0.5s ease-out;
+    transform: translateY(0);
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media screen and (max-width: 768px) {
+    #verification-modal .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 5vh auto;
+    }
+    
+    #verification-modal h2 {
+        font-size: 1.5rem;
+    }
+    
+    #verification-modal p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #verification-modal .modal-content {
+        width: 100%;
+        padding: 15px;
+        margin: 2vh auto;
+        border-radius: 8px;
+    }
+    
+    #verification-form .form-actions {
+        flex-direction: column;
+    }
+    
+    #verification-form .form-actions button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+#verification-form {
+    margin-top: 1.5rem;
+}
+
+#verification-modal h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#verification-modal p {
+    text-align: center;
+    color: #5d6778;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#verification-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#verification-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#verification-form input[type="text"] {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+#verification-form input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    display: none;
+}
+
+.info-message {
+    color: #3498db;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    display: none;
+}
+
+.timer-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#verification-timer {
+    font-weight: 700;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+#verification-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    gap: 10px;
+}
+
+#verification-form .form-actions button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#verification-form .form-actions button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+    flex: 1;
+}
+
+#verification-form .form-actions button[type="submit"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+#verification-form .form-actions button[type="button"] {
+    background-color: #e5e7eb;
+    color: #4b5563;
+    flex: 1;
+}
+
+#verification-form .form-actions button[type="button"]:hover {
+    background-color: #d1d5db;
+}
+
+#verification-form .form-actions button:disabled {
+    background-color: #9ca3af;
+    color: #e5e7eb;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Стили для кнопок в модальных окнах */
+.form-actions .btn-primary {
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.form-actions .btn-primary:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 8px rgba(52, 152, 219, 0.3);
+    transform: translateY(-2px);
+}
+
+.form-actions .btn-secondary {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-actions .btn-secondary:hover {
+    background-color: #dfe6e9;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Стили для модального окна успешного оформления заказа */
+#success-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#success-modal .modal-content {
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.success-message {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #2ecc71;
+    margin-bottom: 1.5rem;
+    animation: successIconPulse 1.5s ease-in-out;
+}
+
+.success-message h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.success-message p {
+    color: #5d6778;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.order-details {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e6ed;
+}
+
+.order-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.order-detail:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.order-detail .label {
+    color: #7f8c8d;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.order-detail .value {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.success-actions .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.success-actions .btn-primary {
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.success-actions .btn-primary:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 8px rgba(52, 152, 219, 0.3);
+    transform: translateY(-2px);
+}
+
+.success-actions .btn-secondary {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-actions .btn-secondary:hover {
+    background-color: #dfe6e9;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+@keyframes successIconPulse {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Стили для индикатора загрузки */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Стили для платежных методов */
+.sberpay-logo img {
+    max-width: 120px; /* Уменьшаем размер логотипа СберПей в 2.5 раза */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.sberpay-info {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e0e6ed;
+}
+
+.tinkoff-icon {
+    font-size: 2.5rem;
+    color: #ffdd2d;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tinkoff-info {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e0e6ed;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media screen and (max-width: 767px) {
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    #verification-form input[type="text"] {
+        font-size: 1.25rem;
+    }
+    
+    .success-actions {
+        flex-direction: column;
+    }
+    
+    .sberpay-logo img {
+        max-width: 100px; /* Еще меньше на мобильных */
+    }
+}

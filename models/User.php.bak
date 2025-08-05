@@ -1,0 +1,325 @@
+<?php
+require_once __DIR__ . '/../includes/db/database.php';
+
+class User {
+    private $conn;
+    private $table_name = "users";
+
+    // Properties
+    public $id;
+    public $first_name;
+    public $last_name;
+    public $middle_name;
+    public $email;
+    public $phone;
+    public $password;
+    public $address;
+    public $balance;
+    public $avatar_url;
+    public $created_at;
+    public $updated_at;
+    public $email_verified;
+    public $verification_code;
+    public $verification_code_expires_at;
+
+    // Constructor
+    public function __construct() {
+        $database = new Database();
+        $this->conn = $database->getConnection();
+    }
+
+    // Register a new user
+    public function register($firstName, $lastName, $middleName, $email, $phone, $password) {
+        try {
+            error_log("Starting registration process for email: $email, phone: $phone");
+            
+            // Проверка соединения с базой данных
+            if (!$this->conn) {
+                error_log("Registration failed: No database connection");
+                return false;
+            }
+            
+            // Hash password
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            error_log("Password hashed successfully");
+            
+            // Check if email already exists
+            if ($this->emailExists($email)) {
+                error_log("Registration failed: Email already exists - $email");
+                return false;
+            }
+            error_log("Email check passed: $email is available");
+            
+            // Check if phone already exists
+            if ($this->phoneExists($phone)) {
+                error_log("Registration failed: Phone already exists - $phone");
+                return false;
+            }
+            error_log("Phone check passed: $phone is available");
+            
+            // Prepare query
+            $query = "INSERT INTO " . $this->table_name . " (first_name, last_name, middle_name, email, phone, password, balance) VALUES (:first_name, :last_name, :middle_name, :email, :phone, :password, 0)";
+            error_log("Prepared query: $query");
+            
+            // Prepare statement
+            $stmt = $this->conn->prepare($query);
+            if (!$stmt) {
+                error_log("Registration failed: Could not prepare statement. Error: " . print_r($this->conn->errorInfo(), true));
+                return false;
+            }
+            
+            // Sanitize input
+            $firstName = htmlspecialchars(strip_tags($firstName));
+            $lastName = htmlspecialchars(strip_tags($lastName));
+            $middleName = htmlspecialchars(strip_tags($middleName));
+            $email = htmlspecialchars(strip_tags($email));
+            $phone = htmlspecialchars(strip_tags($phone));
+            
+            // Bind parameters
+            $stmt->bindParam(':first_name', $firstName);
+            $stmt->bindParam(':last_name', $lastName);
+            $stmt->bindParam(':middle_name', $middleName);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':phone', $phone);
+            $stmt->bindParam(':password', $hashed_password);
+            error_log("Parameters bound successfully");
+            
+            // Execute query
+            try {
+                if ($stmt->execute()) {
+                    $userId = $this->conn->lastInsertId();
+                    error_log("User registered successfully: $email with ID: $userId");
+                    return $userId;
+                } else {
+                    error_log("Registration failed: Execute error. Error info: " . print_r($stmt->errorInfo(), true));
+                    return false;
+                }
+            } catch (PDOException $e) {
+                error_log("Registration execute error: " . $e->getMessage());
+                error_log("SQL State: " . $e->getCode());
+                return false;
+            }
+        } catch (PDOException $e) {
+            error_log("Database error during registration: " . $e->getMessage());
+            throw new Exception('Database error during registration');
+        } catch (Exception $e) {
+            error_log("Error during registration: " . $e->getMessage());
+            throw $e;
+        }
+    }
+
+    // Login a user
+    public function login($email, $password) {
+        try {
+            $query = "SELECT * FROM " . $this->table_name . " WHERE email = :email LIMIT 0,1";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Log login attempt
+            error_log("Login attempt for email: " . $email);
+            error_log("User found: " . ($user ? 'yes' : 'no'));
+
+            // If user exists, verify password
+            if ($user && password_verify($password, $user['password'])) {
+                error_log("Password verified successfully");
+                return $user;
+            }
+
+            error_log("Password verification failed");
+            return false;
+        } catch (PDOException $e) {
+            error_log("Database error during login: " . $e->getMessage());
+            throw new Exception('Database error during login');
+        } catch (Exception $e) {
+            error_log("Error during login: " . $e->getMessage());
+            throw $e;
+        }
+    }
+    
+    // Login a user with phone
+    public function loginWithPhone($phone, $password) {
+        try {
+            // Очищаем телефон от всех нецифровых символов
+            $cleanPhone = preg_replace('/\D/', '', $phone);
+            
+            // Если номер начинается с 7 и длина 11 цифр, форматируем в +7...
+            if (strlen($cleanPhone) === 11 && $cleanPhone[0] === '7') {
+                $formattedPhone = '+' . $cleanPhone;
+            } else {
+                $formattedPhone = $phone; // Используем оригинальный формат
+            }
+            
+            error_log("Attempting to login with phone: $formattedPhone");
+            
+            // Пробуем найти пользователя по телефону
+            $query = "SELECT * FROM " . $this->table_name . " WHERE phone = :phone LIMIT 0,1";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':phone', $formattedPhone);
+            $stmt->execute();
+
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            // Если не нашли по точному формату, пробуем по чистому номеру
+            if (!$user) {
+                error_log("User not found with exact phone format, trying with clean phone: $cleanPhone");
+                
+                // Ищем по номеру без форматирования, используя LIKE
+                $query = "SELECT * FROM " . $this->table_name . " WHERE REPLACE(REPLACE(REPLACE(REPLACE(phone, '+', ''), '-', ''), '(', ''), ')', '') LIKE :phone LIMIT 0,1";
+
+                $stmt = $this->conn->prepare($query);
+                $phonePattern = '%' . $cleanPhone . '%';
+                $stmt->bindParam(':phone', $phonePattern);
+                $stmt->execute();
+
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            }
+            
+            // Log login attempt
+            error_log("Login attempt for phone: " . $formattedPhone);
+            error_log("User found: " . ($user ? 'yes' : 'no'));
+            
+            // If user exists, verify password
+            if ($user && password_verify($password, $user['password'])) {
+                error_log("Password verified successfully for phone login");
+                return $user;
+            }
+            
+            error_log("Password verification failed for phone login");
+            return false;
+        } catch (PDOException $e) {
+            error_log("Database error during phone login: " . $e->getMessage());
+            throw new Exception('Database error during phone login');
+        } catch (Exception $e) {
+            error_log("Error during phone login: " . $e->getMessage());
+            throw $e;
+        }
+    }
+
+    // Check if email exists
+    public function emailExists($email) {
+        try {
+            error_log("Checking if email exists: $email");
+            $query = "SELECT id FROM " . $this->table_name . " WHERE email = ? LIMIT 0,1";
+            $stmt = $this->conn->prepare($query);
+            if (!$stmt) {
+                error_log("Failed to prepare email check statement: " . print_r($this->conn->errorInfo(), true));
+                return false;
+            }
+            
+            $stmt->bindParam(1, $email);
+            $stmt->execute();
+            
+            $exists = $stmt->rowCount() > 0;
+            error_log("Email check result for $email: " . ($exists ? 'exists' : 'does not exist'));
+            return $exists;
+        } catch (PDOException $e) {
+            error_log("Error checking email existence: " . $e->getMessage());
+            // В случае ошибки считаем, что email не существует
+            return false;
+        }
+    }
+
+    // Check if phone exists
+    public function phoneExists($phone) {
+        try {
+            error_log("Checking if phone exists: $phone");
+            $query = "SELECT id FROM " . $this->table_name . " WHERE phone = ? LIMIT 0,1";
+            $stmt = $this->conn->prepare($query);
+            if (!$stmt) {
+                error_log("Failed to prepare phone check statement: " . print_r($this->conn->errorInfo(), true));
+                return false;
+            }
+            
+            $stmt->bindParam(1, $phone);
+            $stmt->execute();
+            
+            $exists = $stmt->rowCount() > 0;
+            error_log("Phone check result for $phone: " . ($exists ? 'exists' : 'does not exist'));
+            return $exists;
+        } catch (PDOException $e) {
+            error_log("Error checking phone existence: " . $e->getMessage());
+            // В случае ошибки считаем, что телефон не существует
+            return false;
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':amount', $amount);
+        $stmt->bindParam(':id', $id);
+
+        return $stmt->execute();
+    }
+
+    // Change password
+    public function changePassword($id, $newPassword) {
+        $query = "UPDATE " . $this->table_name . " SET password = :password WHERE id = :id";
+
+        $stmt = $this->conn->prepare($query);
+        $password_hash = password_hash($newPassword, PASSWORD_DEFAULT);
+        $stmt->bindParam(':password', $password_hash);
+        $stmt->bindParam(':id', $id);
+
+        return $stmt->execute();
+    }
+    
+    // Verify password for a user
+    public function verifyPassword($id, $password) {
+        $query = "SELECT password FROM " . $this->table_name . " WHERE id = :id LIMIT 0,1";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($user && password_verify($password, $user['password'])) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    // Update password
+    public function updatePassword($id, $newPassword) {
+        return $this->changePassword($id, $newPassword);
+    }
+    
+    // Get user by ID (alias for getById with more descriptive name)
+    public function getUserById($id) {
+        return $this->getById($id);
+    }
+    
+    // Update user profile without address
+    public function updateUserProfile($id, $firstName, $lastName, $middleName, $email, $phone) {
+        $query = "UPDATE " . $this->table_name . " 
+                  SET first_name = :first_name, 
+                      last_name = :last_name, 
+                      middle_name = :middle_name, 
+                      email = :email, 
+                      phone = :phone,
+                      updated_at = NOW() 
+                  WHERE id = :id";
+
+        $stmt = $this->conn->prepare($query);
+
+        // Sanitize input
+        $firstName = htmlspecialchars(strip_tags($firstName));
+        $lastName = htmlspecialchars(strip_tags($lastName));
+        $middleName = htmlspecialchars(strip_tags($middleName));
+        $email = htmlspecialchars(strip_tags($email));
+        $phone = htmlspecialchars(strip_tags($phone));
+
+        // Bind values
+        $stmt->bindParam(':first_name', $firstName);
+        $stmt->bindParam(':last_name', $lastName);
+        $stmt->bindParam(':middle_name', $middleName);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':id', $id);
+
+        return $stmt->execute();
+    }
+}
+?> 

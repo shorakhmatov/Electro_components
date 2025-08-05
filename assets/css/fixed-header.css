@@ -1,0 +1,64 @@
+/* Стили для фиксированной шапки */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Обеспечиваем отступ для контента под фиксированной шапкой */
+main {
+    margin-top: 80px; /* Высота шапки */
+    padding-top: 1rem;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+    .header {
+        position: fixed !important; /* Принудительно фиксируем шапку */
+    }
+    
+    .header .container {
+        padding: 0.75rem 1rem;
+    }
+    
+    main {
+        margin-top: 120px; /* Увеличиваем отступ для мобильной версии */
+    }
+}
+
+/* Предотвращаем скрытие шапки при прокрутке */
+.header.scrolled {
+    transform: translateY(0) !important;
+}
+
+/* Добавляем класс для body, чтобы учитывать фиксированную шапку */
+body {
+    padding-top: 0; /* Убираем верхний отступ, если он был */
+}
+
+/* Улучшаем стиль для мобильного меню */
+.mobile-menu-toggle {
+    z-index: 1001;
+}
+
+/* Обеспечиваем, чтобы меню всегда было видимым */
+.header__nav {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .header__nav {
+        position: fixed;
+        top: 80px; /* Высота шапки */
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 0.5rem 0;
+    }
+}

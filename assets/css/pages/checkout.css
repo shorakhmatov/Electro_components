@@ -1,0 +1,934 @@
+/* Стили для страницы оформления заказа */
+:root {
+    --secondary-color: #ff5722;
+    --success-color: #4caf50;
+    --danger-color: #f44336;
+    --warning-color: #ff9800;
+    --gray-50: #fafafa;
+    --gray-100: #f5f5f5;
+    --gray-200: #eeeeee;
+    --gray-300: #e0e0e0;
+    --gray-400: #bdbdbd;
+    --gray-500: #9e9e9e;
+    --gray-600: #757575;
+    --gray-700: #616161;
+    --gray-800: #424242;
+    --gray-900: #212121;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.checkout-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.checkout-header h1 {
+    font-size: 2rem;
+    color: var(--gray-800);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.checkout-header h1 i {
+    color: var(--primary-color);
+}
+
+/* Шаги оформления заказа */
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--gray-300);
+    color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.step.active .step-number {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.step.completed .step-number {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.step-label {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.step.active .step-label {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.step.completed .step-label {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.step-connector {
+    height: 2px;
+    width: 80px;
+    background-color: var(--gray-300);
+    margin: 0 0.5rem;
+}
+
+.step-connector.completed {
+    background-color: var(--success-color);
+}
+
+/* Содержимое страницы оформления заказа */
+.checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Сводка заказа */
+.order-summary {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+
+.order-summary h2 {
+    font-size: 1.3rem;
+    color: var(--gray-800);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.order-items {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
+.order-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.order-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.item-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.payment-method-icon img.bank-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(2);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 500;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.item-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+.item-total {
+    font-weight: 600;
+    color: var(--gray-800);
+    display: flex;
+    align-items: center;
+}
+
+.order-totals {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    color: var(--gray-700);
+}
+
+.grand-total {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--gray-900);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+/* Секция способов оплаты */
+.payment-methods-section {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+
+.payment-methods-section h2 {
+    font-size: 1.3rem;
+    color: var(--gray-800);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+/* Сохраненные способы оплаты */
+.saved-payment-method {
+    background-color: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.saved-payment-method:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.saved-payment-method.selected {
+    border-color: var(--primary-color);
+    background-color: var(--primary-light);
+}
+
+.payment-method-icon {
+    font-size: 1.5rem;
+    color: var(--gray-600);
+}
+
+.saved-payment-method.selected .payment-method-icon {
+    color: var(--primary-color);
+}
+
+.payment-method-details {
+    flex: 1;
+}
+
+.payment-method-name {
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.payment-method-info {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.payment-method-radio {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary-color);
+}
+
+/* Нет способов оплаты */
+.no-payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--gray-50);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.no-methods-icon {
+    font-size: 3.5rem;
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+}
+
+.no-payment-methods h3 {
+    font-size: 1.3rem;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.no-payment-methods p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+}
+
+.btn-add-payment-method {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-payment-method:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add-payment-method i {
+    font-size: 1.2rem;
+}
+
+/* Кнопка перехода в профиль для добавления способов оплаты */
+.btn-go-to-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-go-to-profile:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-go-to-profile i {
+    font-size: 1.2rem;
+}
+
+/* Новый способ оплаты */
+.new-payment-method {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.new-payment-method h3 {
+    font-size: 1.1rem;
+    color: var(--gray-800);
+    margin-bottom: 1rem;
+}
+
+.payment-form {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(41, 121, 255, 0.1);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.card-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    color: var(--gray-500);
+    font-size: 1.5rem;
+}
+
+.save-card-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.save-card-option input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+}
+
+.save-card-option label {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+}
+
+/* Кнопки действий */
+.checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.btn-back-to-cart {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-back-to-cart:hover {
+    background-color: var(--gray-300);
+}
+
+.btn-place-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-place-order:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-place-order:disabled {
+    background-color: var(--gray-300);
+    color: var(--gray-500);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Модальное окно успешного заказа */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal .close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gray-500);
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: var(--primary-color);
+}
+
+.success-message {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.success-message h3 {
+    font-size: 1.5rem;
+    color: var(--gray-800);
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-300);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .checkout-steps {
+        flex-wrap: wrap;
+    }
+    
+    .step-connector {
+        width: 40px;
+    }
+    
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .checkout-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn-back-to-cart, 
+    .btn-place-order {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .success-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Стили для пустой корзины на странице оплаты */
+.empty-cart-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--gray-50);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.empty-cart-icon {
+    font-size: 3.5rem;
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+}
+
+.empty-cart-message h3 {
+    font-size: 1.3rem;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.empty-cart-message p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+}
+
+.btn-shop-now {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-shop-now:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для секции адреса доставки */
+.delivery-address-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.delivery-address {
+    background-color: var(--gray-50);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#selectedAddressDisplay {
+    margin-bottom: 1rem;
+}
+
+.selected-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 6px;
+    border: 1px solid var(--gray-200);
+}
+
+.address-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.address-details {
+    flex: 1;
+}
+
+.address-name {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--gray-800);
+}
+
+.address-full {
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.address-actions {
+    display: flex;
+    align-items: flex-start;
+}
+
+.remove-address-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-address-btn:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-select-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-select-address:hover {
+    background-color: var(--primary-light);
+}
+
+/* Стили для модального окна выбора адреса */
+.address-modal .modal-content {
+    max-width: 600px;
+}
+
+.saved-addresses {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 1.5rem;
+}
+
+.address-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 6px;
+    border: 1px solid var(--gray-200);
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+}
+
+.address-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.address-card.selected {
+    border-color: var(--primary-color);
+    background-color: var(--primary-light);
+}
+
+.address-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-address-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.select-address-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.no-addresses-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+}
+
+.no-addresses-message h3 {
+    font-size: 1.2rem;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.no-addresses-message p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для кнопки добавления карты */
+.btn-add-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.btn-add-card:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add-card:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn-add-card:disabled {
+    background-color: var(--gray-300);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-add-card i {
+    font-size: 1.2rem;
+}

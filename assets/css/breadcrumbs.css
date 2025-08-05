@@ -1,0 +1,88 @@
+/* Стили для хлебных крошек */
+.breadcrumbs {
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-left: 3px solid var(--primary-color);
+}
+
+.breadcrumbs-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.breadcrumbs-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+    content: '/';
+    margin-left: 8px;
+    color: var(--gray-400);
+}
+
+.breadcrumbs-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.breadcrumbs-link i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.breadcrumbs-current {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Анимация для хлебных крошек */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.breadcrumbs {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Адаптивные стили */
+@media (max-width: 576px) {
+    .breadcrumbs {
+        padding: 8px 12px;
+        margin: 15px 0;
+    }
+    
+    .breadcrumbs-item {
+        font-size: 12px;
+    }
+}

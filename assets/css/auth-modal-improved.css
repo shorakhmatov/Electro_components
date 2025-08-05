@@ -1,0 +1,347 @@
+/* Улучшенные стили для модальных окон авторизации */
+
+/* Общие стили для модальных окон */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    overflow: hidden;
+    animation: modalFadeIn 0.3s ease-out;
+    max-height: 96vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовок модального окна */
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Кнопка закрытия */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+/* Вкладки авторизации */
+.auth-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--gray-200);
+    background-color: var(--gray-100);
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.auth-tab:hover {
+    background-color: var(--gray-200);
+    color: var(--primary-color);
+}
+
+.auth-tab.active {
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+.auth-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Формы авторизации */
+.auth-form {
+    display: none;
+    padding: 25px;
+    max-height: 75vh;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.auth-form.active {
+    display: block !important;
+    animation: formFadeIn 0.3s ease-out;
+}
+
+/* Скроллбар для формы регистрации */
+.auth-form::-webkit-scrollbar {
+    width: 6px;
+}
+
+.auth-form::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: 10px;
+}
+
+.auth-form::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+    border-radius: 10px;
+}
+
+.auth-form::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+}
+
+@keyframes formFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Группы полей формы */
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    font-size: 15px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-light);
+    outline: none;
+}
+
+.form-group.error input {
+    border-color: var(--error);
+}
+
+.form-group .error-message {
+    color: var(--error);
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+/* Группа с чекбоксом */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Кнопка отправки формы */
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-submit i {
+    margin-right: 8px;
+}
+
+/* Футер формы */
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+    color: var(--primary-dark);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 576px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .auth-form {
+        padding: 20px;
+    }
+    
+    .form-group input {
+        padding: 10px 12px;
+    }
+    
+    .btn-submit {
+        padding: 10px;
+    }
+}
+
+/* Анимация при появлении ошибки */
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+    20%, 40%, 60%, 80% {transform: translateX(5px);}
+}
+
+.form-group.error input {
+    animation: shake 0.6s;
+}
+
+/* Стили для иконок в полях ввода */
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.input-icon input {
+    padding-left: 40px;
+}
+
+/* Улучшенные стили для кнопок вкладок */
+.auth-tab {
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-light);
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.auth-tab:hover::before {
+    transform: translateY(0);
+}
+
+/* Эффект пульсации для кнопки отправки */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+    }
+}
+
+.btn-submit:focus {
+    animation: pulse 1.5s infinite;
+}

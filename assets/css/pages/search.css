@@ -1,0 +1,144 @@
+/* Стили для страницы поиска */
+.search-header {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.search-results-count {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Стили для отсутствия результатов */
+.no-results,
+.no-query {
+    text-align: center;
+    padding: 50px 0;
+    margin: 30px 0;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.no-results i,
+.no-query i {
+    font-size: 4rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.no-results h2,
+.no-query h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.no-results p,
+.no-query p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.no-results .btn,
+.no-query .btn {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* Стили для пагинации */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.pagination-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+}
+
+.pagination-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.pagination-item.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.pagination-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    color: var(--text-muted);
+}
+
+.pagination-item.prev,
+.pagination-item.next {
+    padding: 0 15px;
+}
+
+.pagination-item.prev i,
+.pagination-item.next i {
+    margin: 0 5px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .search-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .pagination-item {
+        min-width: 35px;
+        height: 35px;
+        margin: 0 3px;
+    }
+    
+    .pagination-item.prev,
+    .pagination-item.next {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .pagination-item {
+        min-width: 30px;
+        height: 30px;
+        margin: 0 2px;
+        font-size: 0.9rem;
+    }
+    
+    .pagination-item.prev,
+    .pagination-item.next {
+        padding: 0 8px;
+    }
+}

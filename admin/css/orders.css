@@ -1,0 +1,166 @@
+/* Стили для раздела заказов */
+
+/* Фильтры заказов */
+.order-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+/* Статусы заказов */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100px;
+}
+
+.status-pending {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.status-processing {
+    background-color: #2196F3;
+    color: white;
+}
+
+.status-shipped {
+    background-color: #9C27B0;
+    color: white;
+}
+
+.status-delivered {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.status-cancelled {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Детали заказа */
+.order-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .order-details-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.order-info, .customer-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.order-items {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+.order-actions {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Кнопки изменения статуса */
+.status-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.processing-btn {
+    background-color: #2196F3;
+}
+
+.shipped-btn {
+    background-color: #9C27B0;
+}
+
+.delivered-btn {
+    background-color: #4CAF50;
+}
+
+.cancel-btn {
+    background-color: #F44336;
+}
+
+.status-btn:hover {
+    opacity: 0.9;
+}
+
+/* Миниатюры товаров */
+.product-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Модальное окно для деталей заказа */
+.large-modal {
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Таблица товаров в заказе */
+#orderItemsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#orderItemsTable th, #orderItemsTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#orderItemsTable th {
+    background-color: #f2f2f2;
+}
+
+/* Сообщение об отсутствии заказов */
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-style: italic;
+}

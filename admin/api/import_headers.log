@@ -1,0 +1,12 @@
+Headers: Array
+(
+    [0] => id
+    [1] => name
+    [2] => category
+    [3] => category_id
+    [4] => description
+    [5] => specifications
+    [6] => price
+    [7] => quantity
+    [8] => image url
+)

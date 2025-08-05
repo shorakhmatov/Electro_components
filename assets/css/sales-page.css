@@ -1,0 +1,143 @@
+/* Стили для страницы акций и скидок */
+.sales-header {
+    margin: 30px 0;
+}
+
+.sales-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.subsection-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+/* Стили для баннеров акций */
+.sales-banners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.sale-banner {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+    height: 200px;
+}
+
+.sale-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-light);
+}
+
+.sale-banner-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sale-banner-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.sale-banner-content p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.sale-banner-image {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sale-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для товаров со скидкой */
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.old-price {
+    font-size: 14px;
+    color: var(--text-light);
+    text-decoration: line-through;
+    margin-bottom: 2px;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--error);
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .sales-banners {
+        grid-template-columns: 1fr;
+    }
+    
+    .sale-banner {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .sale-banner-image {
+        width: 100%;
+        height: 150px;
+        order: -1;
+    }
+    
+    .subsection-title {
+        font-size: 20px;
+    }
+}

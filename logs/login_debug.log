@@ -1,0 +1,130 @@
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=2, username=admin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=2, username=admin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=2, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=2, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=2, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=superadmin, password=admin123
+Пользователь не найден
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=3, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=2, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=3, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=4, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=superadmin, password=superadmin123
+Найден пользователь: id=5, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=6, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=6, username=admin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=6, username=admin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=6, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=6, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=7, username=superadmin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=6, username=admin
+Неверный пароль
+Попытка входа: username=admin, password=admin123
+Найден пользователь: id=8, username=admin
+Неверный пароль
+Попытка входа: username=superadmin, password=admin123
+Найден пользователь: id=9, username=superadmin
+Неверный пароль

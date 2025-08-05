@@ -1,0 +1,2816 @@
+
+2025-05-15 07:50:24 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:50:29 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:50:40 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:51:12 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:52:13 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:57:58 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:58:42 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:58:48 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 07:58:56 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 08:02:42 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 08:02:47 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 08:02:50 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 08:02:53 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 08:08:06 - Balance.php
+User ID: 1
+Cart count: 17
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 6
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 03:55:10
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-13 09:50:24
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [2] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 3
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-12 18:48:29
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [3] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 4
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-12 18:54:54
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [4] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 08:13:32 - Balance.php
+User ID: 7
+Cart count: 0
+Cart items: Array
+(
+)
+
+
+2025-05-15 10:16:58 - Balance.php
+User ID: 1
+Cart count: 19
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 311
+            [user_id] => 1
+            [product_id] => 712
+            [quantity] => 3
+            [created_at] => 2025-05-12 16:34:14
+            [updated_at] => 2025-05-15 17:16:54
+            [name] => Резистор 1 кОм 0.5 Вт
+            [price] => 7.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7u8L1lQEjtxMJh6vUfUy9kytShYXgPa_acQ&s
+            [stock_quantity] => 1500
+        )
+
+    [1] => Array
+        (
+            [id] => 326
+            [user_id] => 1
+            [product_id] => 729
+            [quantity] => 3
+            [created_at] => 2025-05-15 16:27:51
+            [updated_at] => 2025-05-15 17:13:54
+            [name] => Резистор 2.7 кОм 0.25 Вт
+            [price] => 5.50
+            [image_url] => https://static.chipdip.ru/lib/294/DOC005294160.jpg
+            [stock_quantity] => 2200
+        )
+
+    [2] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 3
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-15 17:13:57
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [3] => Array
+        (
+            [id] => 317
+            [user_id] => 1
+            [product_id] => 939
+            [quantity] => 5
+            [created_at] => 2025-05-12 18:48:29
+            [updated_at] => 2025-05-15 17:09:26
+            [name] => Датчик газа MQ-135
+            [price] => 210.00
+            [image_url] => https://static.insales-cdn.com/images/products/1/4654/425062958/DSCN5337.jpg
+            [stock_quantity] => 800
+        )
+
+    [4] => Array
+        (
+            [id] => 318
+            [user_id] => 1
+            [product_id] => 971
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:54
+            [updated_at] => 2025-05-15 17:05:51
+            [name] => Датчик давления DPS310
+            [price] => 250.00
+            [image_url] => https://ae04.alicdn.com/kf/S28cd958406d74d52bcaa52d449a18728P.jpg_480x480.jpg
+            [stock_quantity] => 1000
+        )
+
+    [5] => Array
+        (
+            [id] => 327
+            [user_id] => 1
+            [product_id] => 979
+            [quantity] => 2
+            [created_at] => 2025-05-15 16:56:44
+            [updated_at] => 2025-05-15 16:56:44
+            [name] => USB флеш-накопитель 128GB Kingston DataTraveler
+            [price] => 2000.00
+            [image_url] => https://cdn.citilink.ru/YRZ1o9hox0EpDL86OgAZVsWem8lOTV7lVUQrE4UDqYU/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/cd10d570-acf2-40ce-a8cd-a4d480b3d502.jpg
+            [stock_quantity] => 800
+        )
+
+    [6] => Array
+        (
+            [id] => 316
+            [user_id] => 1
+            [product_id] => 1100
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:48:27
+            [updated_at] => 2025-05-12 18:48:27
+            [name] => Набор шестигранников Wera 9 шт.
+            [price] => 1500.00
+            [image_url] => https://media.garwin.ru/images/products/53/30/533079d9-2729-4904-85eb-da73d391506c-w488r.jpeg
+            [stock_quantity] => 400
+        )
+
+    [7] => Array
+        (
+            [id] => 319
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-12 18:54:55
+            [updated_at] => 2025-05-12 18:54:55
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-15 17:20:04 - Balance.php
+User ID: 1
+Cart count: 36
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 320
+            [user_id] => 1
+            [product_id] => 730
+            [quantity] => 2
+            [created_at] => 2025-05-13 09:50:24
+            [updated_at] => 2025-05-16 00:19:49
+            [name] => Резистор 220 кОм 0.125 Вт
+            [price] => 4.75
+            [image_url] => https://static.procontact74.ru/media/product/a6af690f-1aea-11e9-9279-00e04c130b2c_7adc229e-2831-11e9-80c0-e0d55e81e32a.jpeg
+            [stock_quantity] => 3000
+        )
+
+    [1] => Array
+        (
+            [id] => 333
+            [user_id] => 1
+            [product_id] => 973
+            [quantity] => 3
+            [created_at] => 2025-05-15 17:22:28
+            [updated_at] => 2025-05-16 00:19:58
+            [name] => Оперативная память DDR4 16GB Corsair Vengeance LPX
+            [price] => 6500.00
+            [image_url] => https://cdn.citilink.ru/h4peSSvrl1JK7LpWa2SbGTHC8t2WrOS3uUqHGt3ZrWs/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/e450b46d-a422-4d7c-9357-ed5b6dd2bd04.jpg
+            [stock_quantity] => 300
+        )
+
+    [2] => Array
+        (
+            [id] => 334
+            [user_id] => 1
+            [product_id] => 710
+            [quantity] => 4
+            [created_at] => 2025-05-15 17:25:16
+            [updated_at] => 2025-05-16 00:16:42
+            [name] => Микроконтроллер ATmega88PA-AU
+            [price] => 250.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/4398/751497518/chip-atmega88pa-au.jpg
+            [stock_quantity] => 300
+        )
+
+    [3] => Array
+        (
+            [id] => 335
+            [user_id] => 1
+            [product_id] => 1128
+            [quantity] => 3
+            [created_at] => 2025-05-15 18:14:10
+            [updated_at] => 2025-05-16 00:20:02
+            [name] => Шасси для робота Pololu Zumo
+            [price] => 3000.00
+            [image_url] => https://robototehnika.ru/upload/iblock/f5b/efoqa9qe6x180fhc6r9h3e3pi80568kq/26677240-0b47-11e9-b14d-047d7b09e6c7_26677247-0b47-11e9-b14d-047d7b09e6c7.resize1.jpeg
+            [stock_quantity] => 200
+        )
+
+    [4] => Array
+        (
+            [id] => 338
+            [user_id] => 1
+            [product_id] => 1055
+            [quantity] => 3
+            [created_at] => 2025-05-15 18:14:29
+            [updated_at] => 2025-05-16 00:14:50
+            [name] => Разъём Molex Mini-Fit Plus
+            [price] => 80.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNqvxflFwUeHm14IvW2Zoy6LLJDXk-qDhqNg&s
+            [stock_quantity] => 1500
+        )
+
+    [5] => Array
+        (
+            [id] => 342
+            [user_id] => 1
+            [product_id] => 1000
+            [quantity] => 3
+            [created_at] => 2025-05-15 18:20:57
+            [updated_at] => 2025-05-15 18:20:57
+            [name] => Оперативная память DDR5 16GB Crucial Pro
+            [price] => 9500.00
+            [image_url] => https://www.crucial.com/images/products/crucial-pro-ddr5.jpg
+            [stock_quantity] => 200
+        )
+
+    [6] => Array
+        (
+            [id] => 343
+            [user_id] => 1
+            [product_id] => 809
+            [quantity] => 1
+            [created_at] => 2025-05-15 18:21:07
+            [updated_at] => 2025-05-15 18:21:07
+            [name] => Конденсатор 0.1 мкФ 100В
+            [price] => 6.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTjxgeTlVroQMDVq4ZLNFykLRp04azhFSIBg&s
+            [stock_quantity] => 3500
+        )
+
+    [7] => Array
+        (
+            [id] => 344
+            [user_id] => 1
+            [product_id] => 771
+            [quantity] => 6
+            [created_at] => 2025-05-15 18:21:20
+            [updated_at] => 2025-05-15 18:21:20
+            [name] => Конденсатор 100 мкФ 25В
+            [price] => 10.25
+            [image_url] => https://mcustore.ru/img/site/kondensator-elektroliticheskij-100-mkf-25-v_s4.jpg
+            [stock_quantity] => 1500
+        )
+
+    [8] => Array
+        (
+            [id] => 345
+            [user_id] => 1
+            [product_id] => 772
+            [quantity] => 1
+            [created_at] => 2025-05-15 18:21:26
+            [updated_at] => 2025-05-15 18:21:26
+            [name] => Конденсатор 1 мкФ 50В
+            [price] => 6.00
+            [image_url] => https://www.avrobot.ru/images/product_images/popup_images/424_0.JPG
+            [stock_quantity] => 3000
+        )
+
+    [9] => Array
+        (
+            [id] => 346
+            [user_id] => 1
+            [product_id] => 773
+            [quantity] => 3
+            [created_at] => 2025-05-15 18:21:29
+            [updated_at] => 2025-05-15 18:21:29
+            [name] => Конденсатор 22 мкФ 16В
+            [price] => 7.75
+            [image_url] => https://ir.ozone.ru/s3/multimedia-r/c1000/6226023435.jpg
+            [stock_quantity] => 2500
+        )
+
+    [10] => Array
+        (
+            [id] => 347
+            [user_id] => 1
+            [product_id] => 776
+            [quantity] => 3
+            [created_at] => 2025-05-15 18:21:37
+            [updated_at] => 2025-05-15 18:21:37
+            [name] => Конденсатор 0.1 мкФ 50В
+            [price] => 5.25
+            [image_url] => https://smdx.ru/uploads/product/500/514/capacitor.jpg
+            [stock_quantity] => 4000
+        )
+
+    [11] => Array
+        (
+            [id] => 348
+            [user_id] => 1
+            [product_id] => 834
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:06:33
+            [updated_at] => 2025-05-16 00:06:33
+            [name] => Светодиод LED SMD 0805 Синий
+            [price] => 5.50
+            [image_url] => https://static.chipdip.ru/lib/740/DOC043740046.jpg
+            [stock_quantity] => 4000
+        )
+
+    [12] => Array
+        (
+            [id] => 349
+            [user_id] => 1
+            [product_id] => 1161
+            [quantity] => 1
+            [created_at] => 2025-05-16 00:06:35
+            [updated_at] => 2025-05-16 00:06:35
+            [name] => Полупроводниковая схемотехника
+            [price] => 4000.00
+            [image_url] => https://sun9-36.userapi.com/impg/GMs_WjR851ZowdBEXA-sv8NMbzQ_biKnaNGrhw/Rl3XsDYKJ7k.jpg?size=414x604&quality=96&sign=7bda0cd1dc60ef392d10e73122a62437&type=album
+            [stock_quantity] => 100
+        )
+
+    [13] => Array
+        (
+            [id] => 350
+            [user_id] => 1
+            [product_id] => 799
+            [quantity] => 1
+            [created_at] => 2025-05-16 00:06:41
+            [updated_at] => 2025-05-16 00:06:41
+            [name] => Конденсатор 470 мкФ 16В
+            [price] => 14.00
+            [image_url] => https://mcustore.ru/img/site/kondensator-elektroliticheskij-470-mkf-16-v.jpg
+            [stock_quantity] => 1200
+        )
+
+)
+
+
+2025-05-18 07:37:54 - Balance.php
+User ID: 1
+Cart count: 21
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [2] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [3] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [4] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [5] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [6] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-18 08:25:27 - Balance.php
+User ID: 1
+Cart count: 21
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [2] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [3] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [4] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [5] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [6] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-18 17:10:10 - Balance.php
+User ID: 1
+Cart count: 21
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [2] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [3] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [4] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [5] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [6] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-18 17:12:24 - Balance.php
+User ID: 1
+Cart count: 21
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [2] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [3] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [4] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [5] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [6] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-18 17:12:24 - Balance.php
+User ID: 1
+Cart count: 21
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [2] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [3] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [4] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [5] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [6] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-21 08:38:54 - Balance.php
+User ID: 1
+Cart count: 21
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [2] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [3] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [4] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [5] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [6] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+)
+
+
+2025-05-21 08:40:02 - Balance.php
+User ID: 1
+Cart count: 23
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [2] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [3] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [4] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [6] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [7] => Array
+        (
+            [id] => 369
+            [user_id] => 1
+            [product_id] => 694
+            [quantity] => 2
+            [created_at] => 2025-05-21 15:39:48
+            [updated_at] => 2025-05-21 15:39:48
+            [name] => Микроконтроллер STM32F303CCT6
+            [price] => 600.25
+            [image_url] => https://media.distrelec.com/Web/WebShopImages/landscape_large/1-/01/ST-STM32F100C8T6B-30170701-01.jpg
+            [stock_quantity] => 130
+        )
+
+)
+
+
+2025-05-21 08:52:58 - Balance.php
+User ID: 1
+Cart count: 23
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 357
+            [user_id] => 1
+            [product_id] => 782
+            [quantity] => 2
+            [created_at] => 2025-05-16 00:33:43
+            [updated_at] => 2025-05-16 00:34:19
+            [name] => Конденсатор 100 пФ 50В
+            [price] => 4.50
+            [image_url] => https://payalnik-on.ru/d/kondensator_keramicheskiy.jpg
+            [stock_quantity] => 4000
+        )
+
+    [1] => Array
+        (
+            [id] => 363
+            [user_id] => 1
+            [product_id] => 1094
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:23:15
+            [updated_at] => 2025-05-16 09:25:42
+            [name] => Бокорезы для электроники Knipex 125 мм
+            [price] => 2500.00
+            [image_url] => https://cdn.vseinstrumenti.ru/images/goods/ruchnoj-instrument/sharnirno-gubtsevyj-instrument/506158/1200x800/52635298.jpg
+            [stock_quantity] => 400
+        )
+
+    [2] => Array
+        (
+            [id] => 364
+            [user_id] => 1
+            [product_id] => 830
+            [quantity] => 5
+            [created_at] => 2025-05-16 09:27:38
+            [updated_at] => 2025-05-16 09:27:38
+            [name] => Светодиод LED 5мм Желтый
+            [price] => 3.50
+            [image_url] => https://static.insales-cdn.com/images/products/1/6658/36739586/led-5mm.3.jpg
+            [stock_quantity] => 5000
+        )
+
+    [3] => Array
+        (
+            [id] => 365
+            [user_id] => 1
+            [product_id] => 922
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:27:53
+            [updated_at] => 2025-05-16 09:27:53
+            [name] => Транзистор IRFBC40
+            [price] => 25.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJKvi3wrs4ps3icFLE446bkAarl8yjCmNaNA&s
+            [stock_quantity] => 1500
+        )
+
+    [4] => Array
+        (
+            [id] => 366
+            [user_id] => 1
+            [product_id] => 1179
+            [quantity] => 1
+            [created_at] => 2025-05-16 09:29:07
+            [updated_at] => 2025-05-16 09:29:07
+            [name] => Энциклопедия радиолюбителя
+            [price] => 1000.00
+            [image_url] => https://avidreaders.ru/pics/8/1/803181.jpeg
+            [stock_quantity] => 400
+        )
+
+    [5] => Array
+        (
+            [id] => 367
+            [user_id] => 1
+            [product_id] => 942
+            [quantity] => 3
+            [created_at] => 2025-05-16 09:41:32
+            [updated_at] => 2025-05-16 09:41:40
+            [name] => Датчик давления MPX5700AP
+            [price] => 600.00
+            [image_url] => https://www.promelec.ru/fs/cache/b6/87/f8/04/6b158f103b025515ceeb60e7.jpg
+            [stock_quantity] => 500
+        )
+
+    [6] => Array
+        (
+            [id] => 368
+            [user_id] => 1
+            [product_id] => 1091
+            [quantity] => 2
+            [created_at] => 2025-05-16 18:58:58
+            [updated_at] => 2025-05-16 18:58:58
+            [name] => Плоскогубцы Knipex 180 мм
+            [price] => 2000.00
+            [image_url] => https://knipex-pro.ru/image/cache/data/product/knipex/KN-0306180-800x531.jpg
+            [stock_quantity] => 300
+        )
+
+    [7] => Array
+        (
+            [id] => 369
+            [user_id] => 1
+            [product_id] => 694
+            [quantity] => 2
+            [created_at] => 2025-05-21 15:39:48
+            [updated_at] => 2025-05-21 15:39:48
+            [name] => Микроконтроллер STM32F303CCT6
+            [price] => 600.25
+            [image_url] => https://media.distrelec.com/Web/WebShopImages/landscape_large/1-/01/ST-STM32F100C8T6B-30170701-01.jpg
+            [stock_quantity] => 130
+        )
+
+)
+
+
+2025-05-21 16:32:25 - Balance.php
+User ID: 7
+Cart count: 4
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 372
+            [user_id] => 7
+            [product_id] => 709
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:11
+            [updated_at] => 2025-05-21 22:33:11
+            [name] => Микроконтроллер STM32F401RET6
+            [price] => 650.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nKZe7on7FbFoxv1_9UD9cqAwZ-EkyPcDSA&s
+            [stock_quantity] => 120
+        )
+
+    [1] => Array
+        (
+            [id] => 373
+            [user_id] => 7
+            [product_id] => 919
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:17
+            [updated_at] => 2025-05-21 22:33:17
+            [name] => Транзистор IRF530
+            [price] => 17.50
+            [image_url] => https://doc.platan.ru/img_base/view/901640.jpg
+            [stock_quantity] => 1800
+        )
+
+    [2] => Array
+        (
+            [id] => 371
+            [user_id] => 7
+            [product_id] => 936
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:04
+            [updated_at] => 2025-05-21 22:33:04
+            [name] => Датчик тока ACS712
+            [price] => 220.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Sy_1mNyl6GO0gjwh0bwLP60YrFJlHQmMhw&s
+            [stock_quantity] => 1200
+        )
+
+    [3] => Array
+        (
+            [id] => 370
+            [user_id] => 7
+            [product_id] => 941
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:01
+            [updated_at] => 2025-05-21 22:33:01
+            [name] => Датчик магнитного поля SS495A
+            [price] => 100.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvfwohLU13JYQ-MexbNAM96VpYSXl6Y9XzTg&s
+            [stock_quantity] => 1800
+        )
+
+)
+
+
+2025-05-21 17:04:09 - Balance.php
+User ID: 7
+Cart count: 5
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 372
+            [user_id] => 7
+            [product_id] => 709
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:11
+            [updated_at] => 2025-05-21 22:33:11
+            [name] => Микроконтроллер STM32F401RET6
+            [price] => 650.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nKZe7on7FbFoxv1_9UD9cqAwZ-EkyPcDSA&s
+            [stock_quantity] => 120
+        )
+
+    [1] => Array
+        (
+            [id] => 373
+            [user_id] => 7
+            [product_id] => 919
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:17
+            [updated_at] => 2025-05-21 22:33:17
+            [name] => Транзистор IRF530
+            [price] => 17.50
+            [image_url] => https://doc.platan.ru/img_base/view/901640.jpg
+            [stock_quantity] => 1800
+        )
+
+    [2] => Array
+        (
+            [id] => 371
+            [user_id] => 7
+            [product_id] => 936
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:04
+            [updated_at] => 2025-05-21 22:33:04
+            [name] => Датчик тока ACS712
+            [price] => 220.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Sy_1mNyl6GO0gjwh0bwLP60YrFJlHQmMhw&s
+            [stock_quantity] => 1200
+        )
+
+    [3] => Array
+        (
+            [id] => 370
+            [user_id] => 7
+            [product_id] => 941
+            [quantity] => 2
+            [created_at] => 2025-05-21 22:33:01
+            [updated_at] => 2025-05-22 00:03:11
+            [name] => Датчик магнитного поля SS495A
+            [price] => 100.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvfwohLU13JYQ-MexbNAM96VpYSXl6Y9XzTg&s
+            [stock_quantity] => 1800
+        )
+
+)
+
+
+2025-05-21 17:04:54 - Balance.php
+User ID: 7
+Cart count: 5
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 372
+            [user_id] => 7
+            [product_id] => 709
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:11
+            [updated_at] => 2025-05-21 22:33:11
+            [name] => Микроконтроллер STM32F401RET6
+            [price] => 650.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nKZe7on7FbFoxv1_9UD9cqAwZ-EkyPcDSA&s
+            [stock_quantity] => 120
+        )
+
+    [1] => Array
+        (
+            [id] => 373
+            [user_id] => 7
+            [product_id] => 919
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:17
+            [updated_at] => 2025-05-21 22:33:17
+            [name] => Транзистор IRF530
+            [price] => 17.50
+            [image_url] => https://doc.platan.ru/img_base/view/901640.jpg
+            [stock_quantity] => 1800
+        )
+
+    [2] => Array
+        (
+            [id] => 371
+            [user_id] => 7
+            [product_id] => 936
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:04
+            [updated_at] => 2025-05-21 22:33:04
+            [name] => Датчик тока ACS712
+            [price] => 220.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Sy_1mNyl6GO0gjwh0bwLP60YrFJlHQmMhw&s
+            [stock_quantity] => 1200
+        )
+
+    [3] => Array
+        (
+            [id] => 370
+            [user_id] => 7
+            [product_id] => 941
+            [quantity] => 2
+            [created_at] => 2025-05-21 22:33:01
+            [updated_at] => 2025-05-22 00:03:11
+            [name] => Датчик магнитного поля SS495A
+            [price] => 100.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvfwohLU13JYQ-MexbNAM96VpYSXl6Y9XzTg&s
+            [stock_quantity] => 1800
+        )
+
+)
+
+
+2025-05-21 17:04:55 - Balance.php
+User ID: 7
+Cart count: 5
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 372
+            [user_id] => 7
+            [product_id] => 709
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:11
+            [updated_at] => 2025-05-21 22:33:11
+            [name] => Микроконтроллер STM32F401RET6
+            [price] => 650.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nKZe7on7FbFoxv1_9UD9cqAwZ-EkyPcDSA&s
+            [stock_quantity] => 120
+        )
+
+    [1] => Array
+        (
+            [id] => 373
+            [user_id] => 7
+            [product_id] => 919
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:17
+            [updated_at] => 2025-05-21 22:33:17
+            [name] => Транзистор IRF530
+            [price] => 17.50
+            [image_url] => https://doc.platan.ru/img_base/view/901640.jpg
+            [stock_quantity] => 1800
+        )
+
+    [2] => Array
+        (
+            [id] => 371
+            [user_id] => 7
+            [product_id] => 936
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:04
+            [updated_at] => 2025-05-21 22:33:04
+            [name] => Датчик тока ACS712
+            [price] => 220.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Sy_1mNyl6GO0gjwh0bwLP60YrFJlHQmMhw&s
+            [stock_quantity] => 1200
+        )
+
+    [3] => Array
+        (
+            [id] => 370
+            [user_id] => 7
+            [product_id] => 941
+            [quantity] => 2
+            [created_at] => 2025-05-21 22:33:01
+            [updated_at] => 2025-05-22 00:03:11
+            [name] => Датчик магнитного поля SS495A
+            [price] => 100.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvfwohLU13JYQ-MexbNAM96VpYSXl6Y9XzTg&s
+            [stock_quantity] => 1800
+        )
+
+)
+
+
+2025-05-21 17:18:31 - Balance.php
+User ID: 7
+Cart count: 5
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 372
+            [user_id] => 7
+            [product_id] => 709
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:11
+            [updated_at] => 2025-05-21 22:33:11
+            [name] => Микроконтроллер STM32F401RET6
+            [price] => 650.25
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nKZe7on7FbFoxv1_9UD9cqAwZ-EkyPcDSA&s
+            [stock_quantity] => 120
+        )
+
+    [1] => Array
+        (
+            [id] => 373
+            [user_id] => 7
+            [product_id] => 919
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:17
+            [updated_at] => 2025-05-21 22:33:17
+            [name] => Транзистор IRF530
+            [price] => 17.50
+            [image_url] => https://doc.platan.ru/img_base/view/901640.jpg
+            [stock_quantity] => 1800
+        )
+
+    [2] => Array
+        (
+            [id] => 371
+            [user_id] => 7
+            [product_id] => 936
+            [quantity] => 1
+            [created_at] => 2025-05-21 22:33:04
+            [updated_at] => 2025-05-21 22:33:04
+            [name] => Датчик тока ACS712
+            [price] => 220.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Sy_1mNyl6GO0gjwh0bwLP60YrFJlHQmMhw&s
+            [stock_quantity] => 1200
+        )
+
+    [3] => Array
+        (
+            [id] => 370
+            [user_id] => 7
+            [product_id] => 941
+            [quantity] => 2
+            [created_at] => 2025-05-21 22:33:01
+            [updated_at] => 2025-05-22 00:03:11
+            [name] => Датчик магнитного поля SS495A
+            [price] => 100.00
+            [image_url] => https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvfwohLU13JYQ-MexbNAM96VpYSXl6Y9XzTg&s
+            [stock_quantity] => 1800
+        )
+
+)
+

@@ -1,0 +1,45 @@
+/* Стили для отображения количества товаров в корзине и избранном */
+.count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0 6px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+/* Стили для пустого счетчика */
+.count-badge:empty {
+    display: none;
+}
+
+/* Стили для шапки сайта */
+.header__nav {
+    position: relative;
+}
+
+.header__nav ul {
+    gap: 0.8rem !important; /* Уменьшаем расстояние между элементами */
+}
+
+.header__nav a {
+    position: relative;
+    padding: 0.5rem 0.5rem !important; /* Уменьшаем отступы внутри ссылок */
+}
+
+/* Стили для кнопок в шапке */
+#favoritesBtn .count-badge {
+    background-color: var(--primary-color);
+}
+
+#cartBtn .count-badge {
+    background-color: var(--primary-color);
+}
